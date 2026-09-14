@@ -1,5 +1,4 @@
 import { inject, Service } from '@angular/core';
-import type { Observable } from 'rxjs';
 
 import type { Favorite } from '../../domain/entities/favorite';
 import { FavoriteRepository } from '../../domain/repositories/favorite.repository';
@@ -8,7 +7,7 @@ import { FavoriteRepository } from '../../domain/repositories/favorite.repositor
 export class GetFavoritesUseCase {
   private readonly favoriteRepository = inject(FavoriteRepository);
 
-  execute(): Observable<readonly Favorite[]> {
+  execute(): Promise<readonly Favorite[]> {
     return this.favoriteRepository.getFavorites();
   }
 }

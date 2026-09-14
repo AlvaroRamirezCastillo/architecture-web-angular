@@ -70,3 +70,27 @@ src/
                                 └── favorite-list.component.ts
 
 
+
+## simplificado
+
+features/
+└── favorites/
+    └── pages/
+        └── favorites-page/
+            ├── domain/
+            │   ├── favorite.viewmodel.ts
+            │   ├── create-favorite.command.ts
+            │   ├── favorite.repository.ts
+            │   └── can-execute-favorite.ts
+            │
+            ├── data/
+            │   ├── favorite-api.repository.ts
+            │   ├── favorite-response.dto.ts
+            │   └── favorite.mapper.ts
+            │
+            ├── components/
+            │   └── favorite-list/
+            │       └── favorite-list.component.ts
+            │
+            ├── favorites.facade.ts
+            └── favorites-page.component.ts
