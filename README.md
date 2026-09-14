@@ -79,7 +79,6 @@ features/
         └── favorites-page/
             ├── domain/
             │   ├── favorite.viewmodel.ts
-            │   ├── create-favorite.command.ts
             │   ├── favorite.repository.ts
             │   └── can-execute-favorite.ts
             │

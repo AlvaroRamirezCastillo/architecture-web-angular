@@ -1,0 +1,22 @@
+<main class="favorites-page">
+  <section aria-labelledby="favorites-title">
+    <header class="favorites-page__header">
+      <h1 id="favorites-title">Favoritos</h1>
+    </header>
+
+    @let vm = facade.favoritesStateViewmodel();
+
+    @if (vm.isLoading) {
+      <p class="favorites-page__status" aria-live="polite">Cargando favoritos...</p>
+    } @else if (vm.errorMessage) {
+      <div class="favorites-page__error" role="alert">
+        <p>{{ vm.errorMessage }}</p>
+        <button type="button" (click)="facade.load()">Reintentar</button>
+      </div>
+    } @else if (vm.favorites.length === 0) {
+      <p class="favorites-page__status">No tienes favoritos disponibles.</p>
+    } @else {
+      <app-favorite-list [items]="vm.favorites" />
+    }
+  </section>
+</main>

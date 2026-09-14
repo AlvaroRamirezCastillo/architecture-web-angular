@@ -10,4 +10,12 @@ export const routes: Routes = [
       ),
     providers: [provideHttpClient()],
   },
+  {
+    path: 'favorites-vertical',
+    loadComponent: () =>
+      import('./features/favorites-vertical/pages/favorites-page/favorites-page.component').then(
+        (module) => module.FavoritesPageComponent,
+      ),
+    providers: [provideHttpClient()],
+  },
 ];
